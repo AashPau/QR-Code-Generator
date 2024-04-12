@@ -8,6 +8,7 @@ export const CodeGenerator = () => {
 
 	const handleGenerateQrCode = () => {
 		setQrCode(input);
+		setInput("");
 	};
 	return (
 		<div>
@@ -17,6 +18,7 @@ export const CodeGenerator = () => {
 					onChange={(e) => setInput(e.target.value)}
 					type="text"
 					name="qr-code"
+					value={input}
 					placeholder="enter your value here"
 				/>
 				<button
